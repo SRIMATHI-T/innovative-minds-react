@@ -1,0 +1,79 @@
+.physics-page {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+.jumbotron-physics {
+  background-color: skyblue !important;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+}
+
+.jumbotron-laureates {
+  background-color: lightgrey !important;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+}
+
+.laureate-image {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  margin-left: 30px;
+}
+
+.text-content {
+  flex: 1;
+  text-align: left;
+}
+
+.physics-page h2, .physics-page h3 {
+  color: darkmagenta;
+  margin-bottom: 20px;
+}
+
+.physics-page h4 {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.physics-page p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.physics-page ol {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.physics-page .col-md-4 {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.physics-page .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+
+.physics-page .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}

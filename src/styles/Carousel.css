@@ -1,0 +1,25 @@
+.carousel-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.carousel-image {
+  height: 450px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-indicators li {
+  background-color: #333;
+}
+
+.carousel-indicators .active {
+  background-color: #007bff;
+}

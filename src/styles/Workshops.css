@@ -1,0 +1,220 @@
+.workshops-page {
+  min-height: 100vh;
+  padding: 40px 0 60px;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef6fb 100%);
+}
+
+.curved-background {
+  position: relative;
+  overflow: hidden;
+  height: 360px;
+  margin-bottom: 40px;
+  border-radius: 2rem;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.12);
+}
+
+.curved-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/worshopbg.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.95;
+  clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 40px 20px;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(16, 42, 73, 0.72), rgba(32, 107, 196, 0.2));
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  max-width: 760px;
+}
+
+.content h1 {
+  font-size: clamp(2.5rem, 3vw, 3.4rem);
+  margin-bottom: 0.75rem;
+  line-height: 1.05;
+}
+
+.marquee-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 18px 24px;
+  margin-bottom: 35px;
+  border-radius: 1.5rem;
+  box-shadow: 0 28px 60px rgba(15, 23, 42, 0.08);
+}
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 24s linear infinite;
+  font-size: 1rem;
+  color: #102a43;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.workshop-features {
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.workshop-features h4 {
+  font-size: 1rem;
+  line-height: 2.1;
+  margin-bottom: 0;
+  color: #243b55;
+}
+
+.workshop-features li {
+  margin-bottom: 14px;
+  list-style: none;
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.workshop-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2f9e44;
+  font-weight: 700;
+}
+
+.workshop-title {
+  font-size: clamp(2.2rem, 2.6vw, 3rem);
+  color: #102a43;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.workshop-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 40px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.workshop-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 32px;
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.workshop-image {
+  width: 100%;
+  max-width: 760px;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  margin-bottom: 28px;
+}
+
+.workshop-content {
+  text-align: center;
+}
+
+.workshop-title-text {
+  font-size: 1.8rem;
+  color: #102a43;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.workshop-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 26px;
+}
+
+.read-more-btn {
+  background: linear-gradient(135deg, #2f9e44, #47b767);
+  border: none;
+  padding: 14px 36px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.read-more-btn:hover {
+  background: linear-gradient(135deg, #23803f, #3e8c55);
+}
+
+.carousel-section {
+  margin: 50px 0;
+}
+
+.comments-section h2 {
+  font-size: clamp(2rem, 2.2vw, 2.4rem);
+  font-style: italic;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #102a43;
+}
+
+.comments-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.comment-box {
+  background: #ffffff;
+  color: #102a43;
+  padding: 26px;
+  border-radius: 1.25rem;
+  font-style: italic;
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.08);
+}
+
+@media (max-width: 992px) {
+  .comments-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .workshops-page {
+    padding: 30px 0 45px;
+  }
+
+  .curved-background {
+    height: 300px;
+  }
+
+  .content {
+    padding: 30px 18px;
+  }
+
+  .workshop-item {
+    padding: 24px;
+  }
+}
