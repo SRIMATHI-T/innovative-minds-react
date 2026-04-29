@@ -8,8 +8,7 @@ const CustomNavbar = () => {
   return (
     <BSNavbar bg="dark" variant="dark" expand="lg" sticky="top" className="mb-4 shadow-sm">
       <BSNavbar.Brand as={Link} to="/">
-
- <h2>Nobel + Auth Section</h2>
+       <h2>Nobel + Auth Section</h2>
         INNOVATIVE MINDS OF NATIONS
       </BSNavbar.Brand>
       <BSNavbar.Toggle aria-controls="basic-navbar-nav" />
