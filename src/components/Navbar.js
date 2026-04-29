@@ -1,21 +1,14 @@
 import React from 'react';
 import { Navbar as BSNavbar, Nav, NavDropdown } from 'react-bootstrap';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useAuth } from '../AuthContext';
+import { Link, useLocation } from 'react-router-dom';
 
 const CustomNavbar = () => {
   const location = useLocation();
-  const navigate = useNavigate();
-  const { user, logout } = useAuth();
-
-  const handleLogout = () => {
-    logout();
-    navigate('/');
-  };
 
   return (
     <BSNavbar bg="dark" variant="dark" expand="lg" sticky="top" className="mb-4 shadow-sm">
       <BSNavbar.Brand as={Link} to="/">
+        <h2>Nobel Section</h2>
         INNOVATIVE MINDS OF NATIONS
       </BSNavbar.Brand>
       <BSNavbar.Toggle aria-controls="basic-navbar-nav" />
@@ -44,28 +37,15 @@ const CustomNavbar = () => {
               Economic Sciences
             </NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link as={Link} to="/contact">
+                    <Nav.Link as={Link} to="/contact">
             Contact
           </Nav.Link>
-          {user ? (
-            <>
-              <Nav.Link disabled>
-                Welcome, {user.username}
-              </Nav.Link>
-              <Nav.Link onClick={handleLogout} style={{ cursor: 'pointer' }}>
-                Logout
-              </Nav.Link>
-            </>
-          ) : (
-            <>
-              <Nav.Link as={Link} to="/login">
-                Login
-              </Nav.Link>
-              <Nav.Link as={Link} to="/signup">
-                Signup
-              </Nav.Link>
-            </>
-          )}
+          <Nav.Link as={Link} to="/login">
+            Login
+          </Nav.Link>
+          <Nav.Link as={Link} to="/signup">
+            Signup
+          </Nav.Link>
         </Nav>
       </BSNavbar.Collapse>
     </BSNavbar>
